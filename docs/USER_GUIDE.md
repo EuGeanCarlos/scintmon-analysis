@@ -21,6 +21,8 @@ Os CSVs de uma execução substituem os produtos anteriores no diretório indica
 
 ## Limites científicos
 
-Layout baseado no texto do projeto, ainda sem validação contra o manual e os arquivos reais. XYZ permanece em unidade não confirmada. Não há conversão UTC/local, cálculo de geometria, filtro de elevação nem classificação científica nesta etapa. S4 do arquivo é preservado; negativos e não finitos são marcados inválidos e valores acima de 1 não são truncados. Duplicatas permanecem na saída. As contagens de bloco incluem linhas candidatas rejeitadas; consulte também os diagnósticos de registros.
+Geometria opcional disponível com parâmetros explícitos; consulte [GEOMETRY.md](GEOMETRY.md). A execução básica abaixo continua preservando apenas os dados brutos.
+
+Layout baseado no texto do projeto, ainda sem validação contra o manual e os arquivos reais. XYZ permanece em unidade não confirmada. Sem parâmetros explícitos, a geometria não é calculada. Não há conversão UTC/local nem classificação S4 nesta etapa. S4 do arquivo é preservado; negativos e não finitos são marcados inválidos e valores acima de 1 não são truncados. Duplicatas permanecem na saída. As contagens de bloco incluem linhas candidatas rejeitadas; consulte também os diagnósticos de registros.
 
 Os testes usam dados sintéticos e valores descritos no texto fornecido; não substituem regressão com as quatro noites reais. `raw_5`, `raw_7`, `raw_9`, `raw_10`, auxiliares e potência permanecem sem significado físico inferido.

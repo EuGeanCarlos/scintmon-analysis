@@ -4,6 +4,8 @@ Projeto para estudar a dependência azimutal da cintilação na estação São L
 
 ## Estado atual
 
+Geometria local ECEF → ENU, azimute, elevação, quadrantes e máscara inclusiva disponíveis por CLI com unidades e localização explícitas. Consulte [a metodologia e os parâmetros](docs/GEOMETRY.md). Latitude/longitude ainda não são derivadas automaticamente de XYZ.
+
 Primeira etapa Python implementada: parser `.SUM`, diagnósticos de qualidade, preservação de duplicatas e exportação CSV por terminal. Consulte [o guia de execução](docs/USER_GUIDE.md). Testes automatizados usam casos sintéticos; validação com arquivos reais permanece pendente.
 
 Página inicial estática em português, inspirada na referência visual fornecida, com superfícies claras e cores azul, ciano e verde. Sem resultados simulados. Onze fontes foram catalogadas em [docs/SOURCE_MATRIX.md](docs/SOURCE_MATRIX.md), com hashes em [references/manifest.json](references/manifest.json). Ainda faltam os arquivos .SUM, o manual SCINTMON e o plano original. A revisão integral das fontes precederá a implementação científica.

@@ -29,6 +29,8 @@ Os arquivos MATLAB foram inspecionados como referência; não foram executados n
 
 ## Pendências
 
+Fonte complementar adicionada durante implementação: [ESA Navipedia, Transformations between ECEF and ENU coordinates](https://gssc.esa.int/navipedia/index.php/Transformations_between_ECEF_and_ENU_coordinates), equações 6 e 8–11, consultada em 08/10/2026. Fundamenta a geometria descrita em `GEOMETRY.md`; não confirma unidades, datum ou localização dos arquivos observacionais.
+
 - Manual SCINTMON: não fornecido; `UserGuide.pdf` não o substitui.
 - Arquivos .SUM das quatro noites e plano de trabalho original: não fornecidos.
 - Layout e unidades dos campos .SUM, coordenadas e base temporal: não confirmados por este conjunto.
