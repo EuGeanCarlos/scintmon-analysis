@@ -1,0 +1,84 @@
+{
+  "updated": "2026-10-08",
+  "review_status": "initial_review",
+  "originals_published": false,
+  "sources": [
+    {
+      "filename": "ASSE_kintner2.pdf",
+      "kind": "pdf",
+      "bytes": 1790897,
+      "sha256": "60a5688f845d611c3de7b509a8ebd7d479caee2b7f70890d589e6c431b826467",
+      "pages": 20
+    },
+    {
+      "filename": "Burrel2009.pdf",
+      "kind": "pdf",
+      "bytes": 897020,
+      "sha256": "c20f18b20542e64dceffc835c17c57f8143d9c4706a154f3648b6de337721128",
+      "pages": 13
+    },
+    {
+      "filename": "dePaula_et.al(INPE)CHARACTERISTICS OF THE GPS SIGNAL SCINTILLATIONS DURING IONOSPHERIC IRREGULARI.pdf",
+      "kind": "pdf",
+      "bytes": 2850032,
+      "sha256": "d3b0782e02595d86091e41172fd49c7e7e0c26162c104c6b29077f910753529e",
+      "pages": 19
+    },
+    {
+      "filename": "Radio Science - 2018 - Malins - Modeling the Ionosphere with GPS and Rotation Measure Observations.pdf",
+      "kind": "pdf",
+      "bytes": 2826966,
+      "sha256": "67d2be15fe6dbc8b2b6027e98bdcf0fc8ab37d0cbf5a820ffdc3a59b1bcb3ebf",
+      "pages": 15
+    },
+    {
+      "filename": "estimatePe.m",
+      "kind": "matlab",
+      "bytes": 2250,
+      "sha256": "9ad66a7f36e56606c2a51ab90ad0e50604501be741bd74d1f12c270168f3636d",
+      "pages": null
+    },
+    {
+      "filename": "evalSigmaAndRho.m",
+      "kind": "matlab",
+      "bytes": 7318,
+      "sha256": "2214767c75604971f39662def8c21f144eecadb56d5e137a7166ccfe079a38be",
+      "pages": null
+    },
+    {
+      "filename": "genUAF2.m",
+      "kind": "matlab",
+      "bytes": 4586,
+      "sha256": "a9a4ba73b80003823833728ceacc4960253f934b96ecd2bf9e8a07bd31c3f649",
+      "pages": null
+    },
+    {
+      "filename": "guiscint.m",
+      "kind": "matlab",
+      "bytes": 11686,
+      "sha256": "b6e875f527ac3e85c14047b4722fe535b1bb082ecce8518af17dced6e8da222f",
+      "pages": null
+    },
+    {
+      "filename": "guivisroll.m",
+      "kind": "matlab",
+      "bytes": 3500,
+      "sha256": "db08e6f1a11c4ebf415c0924ded4990554a47eaf6cabdcf4a41d2451ee08993b",
+      "pages": null
+    },
+    {
+      "filename": "scintModel04.m",
+      "kind": "matlab",
+      "bytes": 4253,
+      "sha256": "f2fad0aa2b0a731cdfe5df810d1d69086c8d107d803aa9fb110910ec0be30adc",
+      "pages": null
+    },
+    {
+      "filename": "UserGuide.pdf",
+      "kind": "pdf",
+      "bytes": 61133,
+      "sha256": "4166b31f7d001228862c48af61c0a3c624ceb4de97321539473a5edde0b104a4",
+      "pages": 1
+    }
+  ]
+}

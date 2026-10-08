@@ -4,7 +4,7 @@ Projeto para estudar a dependência azimutal da cintilação na estação São L
 
 ## Estado atual
 
-Página inicial estática em português, inspirada na referência visual fornecida, com superfícies claras e cores azul, ciano e verde. Sem resultados simulados. Os arquivos .SUM e as referências científicas ainda precisam ser fornecidos antes da implementação e validação da análise.
+Página inicial estática em português, inspirada na referência visual fornecida, com superfícies claras e cores azul, ciano e verde. Sem resultados simulados. Onze fontes foram catalogadas em [docs/SOURCE_MATRIX.md](docs/SOURCE_MATRIX.md), com hashes em [references/manifest.json](references/manifest.json). Ainda faltam os arquivos .SUM, o manual SCINTMON e o plano original. A revisão integral das fontes precederá a implementação científica.
 
 ## Publicação
 
