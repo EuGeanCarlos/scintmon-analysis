@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "scintmon-analysis"
-version = "0.1.0"
-description = "Leitura auditável de arquivos SCINTMON SUM"
+version = "0.2.0"
+description = "Análise auditável GNSS SCINTMON com dashboard científico"
 requires-python = ">=3.11"
 
 [tool.setuptools.packages.find]

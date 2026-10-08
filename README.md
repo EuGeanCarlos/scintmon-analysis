@@ -4,6 +4,10 @@ Projeto para estudar a dependência azimutal da cintilação na estação São L
 
 ## Estado atual
 
+Dashboard interativo implementado em Python/Streamlit: importação de .SUM, tabela canônica, geodésia WGS84, três perfis S4, filtros, séries por PRN, sky plots, quadrantes, comparação de noites, contexto CSV opcional, controle de qualidade, fontes e exportação CSV/Parquet/PNG/SVG/HTML/ZIP. [Como executar](docs/RUNNING.md).
+
+Implementação testada com amostra sintética, sem validação instrumental com as quatro noites reais. Manual SCINTMON e plano original continuam pendentes. O simulador MATLAB e a fonte RINEX futura não são implementações observacionais desta etapa.
+
 Geometria local ECEF → ENU, azimute, elevação, quadrantes e máscara inclusiva disponíveis por CLI com unidades e localização explícitas. Consulte [a metodologia e os parâmetros](docs/GEOMETRY.md). Latitude/longitude ainda não são derivadas automaticamente de XYZ.
 
 Primeira etapa Python implementada: parser `.SUM`, diagnósticos de qualidade, preservação de duplicatas e exportação CSV por terminal. Consulte [o guia de execução](docs/USER_GUIDE.md). Testes automatizados usam casos sintéticos; validação com arquivos reais permanece pendente.
@@ -27,4 +31,4 @@ Abra `site/index.html` no navegador.
 
 ## Dependências
 
-A página inicial usa HTML e CSS nativos, sem dependências externas.
+A página estática usa HTML e CSS nativos. A aplicação Python usa as dependências de `requirements.txt`; [justificativas](docs/DEPENDENCIES.md). [Regras científicas](docs/SCIENTIFIC_RULES.md), [dicionário](docs/DATA_DICTIONARY.md) e [metodologia](docs/METHODOLOGY.md).

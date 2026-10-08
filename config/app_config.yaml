@@ -1,0 +1,1 @@
+{"input_time_basis":"raw","local_utc_offset_hours":-3,"profile":"project_default","station_unit":"auto","satellite_unit":"auto","deduplicate_exact":false,"expected_station_bounds":{"latitude":[-5,0],"longitude":[-47,-42]},"station_bounds_note":"Heurística regional ampla do projeto, não coordenada oficial de São Luís. Apenas alerta; nunca corrige posição."}

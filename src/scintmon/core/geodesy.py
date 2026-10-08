@@ -5,6 +5,54 @@ Não inferimos datum, coordenadas ou unidades dos arquivos .SUM.
 """
 from dataclasses import dataclass
 from math import atan2, cos, degrees, hypot, isfinite, radians, sin
+from scintmon.core.rules import rule_value
+
+
+def infer_unit(xyz, kind="station"):
+    """Sugira a escala sem alterar os valores originais; falhe se ambígua."""
+    magnitude = hypot(*xyz)
+    if not isfinite(magnitude):
+        raise ValueError("XYZ não finito")
+    candidates = [unit for unit in ("m", "km")
+                  if rule_value("unit_inference")[f"{kind}_{unit}"][0] <= magnitude
+                  <= rule_value("unit_inference")[f"{kind}_{unit}"][1]]
+    if len(candidates) != 1:
+        raise ValueError("Unidade não inferível pela magnitude; selecione m ou km")
+    return candidates[0]
+
+
+def ecef_to_geodetic(xyz, unit):
+    """Inverta XYZ no elipsoide WGS84 por iteração da latitude.
+
+    N(phi)=a/sqrt(1-e² sin²(phi)); phi=atan2(z+e² N sin(phi),p).
+    A tolerância 1e-13 rad e o limite 100 são critérios numéricos.
+    Pontos no interior profundo da Terra são rejeitados: o método foi
+    destinado à posição de uma estação terrestre, não ao centro terrestre.
+    """
+    if unit not in ("m", "km") or len(xyz) != 3 or not all(map(isfinite, xyz)):
+        raise ValueError("XYZ/unidade inválidos")
+    x, y, z = [v * (1000 if unit == "km" else 1) for v in xyz]
+    a = rule_value("wgs84_a")
+    f = 1 / rule_value("wgs84_inverse_flattening")
+    e2 = f * (2 - f)
+    p = hypot(x, y)
+    if hypot(p, z) < a / 2:
+        raise ValueError("Estação distante da superfície terrestre; confira coordenadas e unidade")
+    if p < 1e-8:
+        return (90 if z > 0 else -90), 0.0, abs(z) - a * (1 - f)
+    lat = atan2(z, p * (1 - e2))
+    for _ in range(100):
+        n = a / (1 - e2 * sin(lat) ** 2) ** .5
+        updated = atan2(z + e2 * n * sin(lat), p)
+        if abs(updated - lat) < 1e-13:
+            lat = updated
+            break
+        lat = updated
+    else:
+        raise ValueError("Conversão geodética não convergiu")
+    n = a / (1 - e2 * sin(lat) ** 2) ** .5
+    height = p * cos(lat) + z * sin(lat) - n * (1 - e2 * sin(lat) ** 2)
+    return degrees(lat), degrees(atan2(y, x)), height
 
 
 @dataclass(frozen=True)

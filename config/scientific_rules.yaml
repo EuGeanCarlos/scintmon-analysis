@@ -1,0 +1,21 @@
+{
+  "rules": [
+    {"id":"wgs84_a","value":6378137,"unit":"m","purpose":"Semieixo maior WGS84","source":"https://earth-info.nga.mil/index.php?action=wgs84&dir=wgs84","status":"confirmado","note":"Datum adotado pelo projeto; não confirma o datum do arquivo."},
+    {"id":"wgs84_inverse_flattening","value":298.257223563,"unit":"adimensional","purpose":"Achatamento inverso WGS84","source":"NGA WGS84","status":"confirmado","note":"f = 1 / achatamento inverso."},
+    {"id":"s4_definition","value":"sqrt((mean(I²)-mean(I)²)/mean(I)²)","unit":"adimensional","purpose":"Definição de S4","source":"de Paula, PDF p. 5","status":"confirmado","note":"S4 do .SUM é preservado, não recalculado da potência."},
+    {"id":"project_elevation","value":30,"unit":"graus","purpose":"Máscara inclusiva principal","source":"Texto de requisitos do projeto","status":"plano original pendente","note":"Não é a máscara operacional do equipamento."},
+    {"id":"project_classes","value":[0.3,0.6],"unit":"S4 adimensional","purpose":"Limites fraca/moderada/forte","source":"Texto de requisitos do projeto","status":"plano original pendente","note":"Fraca <0,30; moderada [0,30;0,60); forte >=0,60."},
+    {"id":"kintner_selection","value":{"s4_gt":0.5,"elevation_gt":10},"unit":"S4 adimensional e graus","purpose":"Seleção da Figura 8","source":"Kintner e Ledvina, PDF p. 12, figura 8","status":"confirmado","note":"Comparações estritas; não corresponde a classificação forte."},
+    {"id":"operational_elevation","value":10,"unit":"graus","purpose":"Flag comparativa de elevação","source":"Texto de requisitos; manual SCINTMON ausente","status":"não confirmado como regra operacional","note":"Flag >=10° distinta da seleção estrita de Kintner."},
+    {"id":"utc_offset","value":-3,"unit":"horas","purpose":"Conversão local opcional","source":"Texto de requisitos do projeto","status":"base temporal do .SUM não confirmada","note":"Só converte após seleção explícita UTC ou local. Offset fixo; não modela horário de verão histórico."},
+    {"id":"quiet_kp","value":3,"unit":"índice Kp","purpose":"Condição calma Kp <=3","source":"Texto de requisitos do projeto","status":"plano original pendente","note":"Não preenche Kp ausente; acima de 3 rotulado acima do critério calmo, não tempestade."},
+    {"id":"solar_periods","value":{"máximo":[2001,2002],"mínimo":[2008,2010]},"unit":"ano","purpose":"Períodos temporais do plano","source":"Texto de requisitos do projeto","status":"plano original pendente","note":"Não é medição nem estimativa de F10.7."},
+    {"id":"geometry","value":"ECEF -> ΔXYZ -> ENU -> atan2","unit":"m e graus","purpose":"Geometria de observação","source":"https://gssc.esa.int/navipedia/index.php/Transformations_between_ECEF_and_ENU_coordinates","status":"confirmado","note":"Latitude geodética; zênite/nadir sem azimute."},
+    {"id":"unit_inference","value":{"station_m":[5000000,8000000],"station_km":[5000,8000],"satellite_m":[10000000,100000000],"satellite_km":[10000,100000]},"unit":"módulo XYZ na unidade candidata","purpose":"Sugestão de unidade por ordem de grandeza","source":"Heurística computacional do projeto","status":"inferência, não confirmação documental","note":"Intervalos amplos; registro explícito por estação e satélite. Fora do intervalo exige unidade manual."}
+  ],
+  "profiles": {
+    "project_default":{"label":"Projeto · fraca/moderada/forte","lower":0.3,"upper":0.6,"minimum_elevation":30,"strict_elevation":false},
+    "kintner_fig8":{"label":"Kintner Fig. 8 · seleção S4 > 0,5 e El > 10°","s4_gt":0.5,"minimum_elevation":10,"strict_elevation":true},
+    "custom":{"label":"Critério personalizado pelo usuário","lower":0.3,"upper":0.6,"minimum_elevation":30,"strict_elevation":false}
+  }
+}
