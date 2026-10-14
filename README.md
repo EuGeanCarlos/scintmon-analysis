@@ -1,3 +1,79 @@
+# Análise de cintilação GNSS / SCINTMON
+
+Ferramentas Python e dashboard Streamlit para análise de cintilação ionosférica. O Pages publica somente a página de apresentação em site/; o dashboard precisa de servidor Python.
+
+## Tecnologias
+
+- Python
+- Streamlit
+- HTML
+- CSS
+
+## Funcionalidades e utilização
+
+Para o dashboard, consulte docs/RUNNING.md; para a página estática, abra site/index.html.
+
+## Como executar
+
+```bash
+git clone https://github.com/EuGeanCarlos/scintmon-analysis.git
+cd scintmon-analysis
+```
+
+Para o dashboard, consulte docs/RUNNING.md; para a página estática, abra site/index.html.
+
+## Demonstração e publicação
+
+Execução local. Nenhuma demonstração nova foi confirmada nesta etapa.
+
+GitHub Pages hospeda arquivos estáticos e não executa Java, Node.js, PHP ou Python. As dependências de servidor deste projeto devem ser executadas em ambiente apropriado.
+
+## Estrutura versionada
+
+```text
+.github/workflows/pages.yml
+.github/workflows/tests.yml
+.gitignore
+.streamlit/config.toml
+README.md
+app.py
+config/app_config.yaml
+config/scientific_rules.yaml
+docs/DATA_DICTIONARY.md
+docs/DELIVERY.md
+docs/DEPENDENCIES.md
+docs/GEOMETRY.md
+docs/METHODOLOGY.md
+docs/RUNNING.md
+docs/SCIENTIFIC_RULES.md
+docs/SOURCE_MATRIX.md
+docs/USER_GUIDE.md
+pyproject.toml
+references/manifest.json
+requirements-lock.txt
+requirements.txt
+scripts/process_all.py
+…
+```
+
+## Status
+
+Protótipo / projeto de estudo em desenvolvimento. A descrição acima distingue o que está implementado das dependências ou etapas pendentes.
+
+## Autor e créditos
+
+**Gean Carlos** — estudante de Engenharia de Computação, UEMA.
+
+[GitHub](https://github.com/EuGeanCarlos)
+
+Licenças, autoria compartilhada e atribuições existentes no código e nos materiais originais permanecem aplicáveis.
+
+---
+
+## Documentação original e contexto
+
+O material original a seguir preserva contexto, créditos e planejamento. Para execução e limitações atuais, considere as seções de auditoria acima.
+
 # Análise de cintilação ionosférica GNSS / SCINTMON
 
 Projeto para estudar a dependência azimutal da cintilação na estação São Luís, MA.
