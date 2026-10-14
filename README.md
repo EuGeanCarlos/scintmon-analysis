@@ -24,7 +24,7 @@ Para o dashboard, consulte docs/RUNNING.md; para a página estática, abra site/
 
 ## Demonstração e publicação
 
-Execução local. Nenhuma demonstração nova foi confirmada nesta etapa.
+[Acessar demonstração verificada](https://eugeancarlos.github.io/scintmon-analysis/)
 
 GitHub Pages hospeda arquivos estáticos e não executa Java, Node.js, PHP ou Python. As dependências de servidor deste projeto devem ser executadas em ambiente apropriado.
 
@@ -108,3 +108,7 @@ Abra `site/index.html` no navegador.
 ## Dependências
 
 A página estática usa HTML e CSS nativos. A aplicação Python usa as dependências de `requirements.txt`; [justificativas](docs/DEPENDENCIES.md). [Regras científicas](docs/SCIENTIFIC_RULES.md), [dicionário](docs/DATA_DICTIONARY.md) e [metodologia](docs/METHODOLOGY.md).
+
+## Validação desta auditoria — 14/10/2026
+
+PUBLICADO: [workflow confirmado](https://github.com/EuGeanCarlos/scintmon-analysis/actions/runs/38604289814), HTTP 200, conteúdo correspondente ao projeto e 0 recursos locais verificados. 36 testes unittest aprovados em ambiente virtual isolado. Pages publica somente site/; o dashboard Streamlit exige execução Python.
